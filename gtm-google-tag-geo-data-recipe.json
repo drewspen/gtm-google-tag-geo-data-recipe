@@ -1,0 +1,315 @@
+{
+    "exportFormatVersion": 2,
+    "exportTime": "2026-11-22 14:25:08",
+    "containerVersion": {
+        "path": "accounts/1315341986/containers/256074863/versions/0",
+        "accountId": "1315341986",
+        "containerId": "256074863",
+        "containerVersionId": "0",
+        "container": {
+            "path": "accounts/1315341986/containers/256074863",
+            "accountId": "1315341986",
+            "containerId": "256074863",
+            "name": "scratchpad",
+            "publicId": "GTM-WRTC8R9D",
+            "usageContext": [
+                "WEB"
+            ],
+            "fingerprint": "1781972270535",
+            "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/1315341986/containers/256074863/workspaces?apiLink=container",
+            "features": {
+                "supportUserPermissions": true,
+                "supportEnvironments": true,
+                "supportWorkspaces": true,
+                "supportGtagConfigs": false,
+                "supportBuiltInVariables": true,
+                "supportClients": false,
+                "supportFolders": true,
+                "supportTags": true,
+                "supportTemplates": true,
+                "supportTriggers": true,
+                "supportVariables": true,
+                "supportVersions": true,
+                "supportZones": true,
+                "supportTransformations": false
+            },
+            "tagIds": [
+                "GTM-WRTC8R9D"
+            ]
+        },
+        "tag": [
+            {
+                "accountId": "1315341986",
+                "containerId": "256074863",
+                "tagId": "489",
+                "name": "Geo Data - dataLayer Push",
+                "type": "cvt_256074863_488",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventName",
+                        "value": "geo_data_ready"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "geoGetter",
+                        "value": "{{Google Tag Geo Getter}}"
+                    }
+                ],
+                "fingerprint": "1795357426196",
+                "firingTriggerId": [
+                    "485"
+                ],
+                "parentFolderId": "478",
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NEEDED",
+                    "consentType": {
+                        "type": "LIST",
+                        "list": [
+                            {
+                                "type": "TEMPLATE",
+                                "value": "analytics_storage"
+                            }
+                        ]
+                    }
+                }
+            }
+        ],
+        "trigger": [
+            {
+                "accountId": "1315341986",
+                "containerId": "256074863",
+                "triggerId": "484",
+                "name": "geo_data_ready",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "geo_data_ready"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1795357426195",
+                "parentFolderId": "478"
+            },
+            {
+                "accountId": "1315341986",
+                "containerId": "256074863",
+                "triggerId": "485",
+                "name": "Geo Loader Window Loaded",
+                "type": "WINDOW_LOADED",
+                "fingerprint": "1795357426195",
+                "parentFolderId": "478"
+            }
+        ],
+        "variable": [
+            {
+                "accountId": "1315341986",
+                "containerId": "256074863",
+                "variableId": "479",
+                "name": "Google Tag Geo Getter",
+                "type": "j",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "google_tag_data.xcd.ip_geo_data_cache.get"
+                    }
+                ],
+                "fingerprint": "1795357426194",
+                "parentFolderId": "478",
+                "formatValue": {}
+            },
+            {
+                "accountId": "1315341986",
+                "containerId": "256074863",
+                "variableId": "481",
+                "name": "Geo - Country",
+                "type": "cvt_256074863_480",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "output",
+                        "value": "country"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "geoGetter",
+                        "value": "{{Google Tag Geo Getter}}"
+                    }
+                ],
+                "fingerprint": "1795357426194",
+                "parentFolderId": "478",
+                "formatValue": {}
+            },
+            {
+                "accountId": "1315341986",
+                "containerId": "256074863",
+                "variableId": "482",
+                "name": "Geo - Region",
+                "type": "cvt_256074863_480",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "output",
+                        "value": "region"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "geoGetter",
+                        "value": "{{Google Tag Geo Getter}}"
+                    }
+                ],
+                "fingerprint": "1795357426195",
+                "parentFolderId": "478",
+                "formatValue": {}
+            },
+            {
+                "accountId": "1315341986",
+                "containerId": "256074863",
+                "variableId": "483",
+                "name": "geo_region",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "geo_region"
+                    }
+                ],
+                "fingerprint": "1795357426195",
+                "parentFolderId": "478",
+                "formatValue": {}
+            },
+            {
+                "accountId": "1315341986",
+                "containerId": "256074863",
+                "variableId": "486",
+                "name": "geo_dma_region",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "geo_dma_region"
+                    }
+                ],
+                "fingerprint": "1795357426195",
+                "parentFolderId": "478",
+                "formatValue": {}
+            },
+            {
+                "accountId": "1315341986",
+                "containerId": "256074863",
+                "variableId": "487",
+                "name": "geo_country",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "geo_country"
+                    }
+                ],
+                "fingerprint": "1795357426195",
+                "parentFolderId": "478",
+                "formatValue": {}
+            },
+            {
+                "accountId": "1315341986",
+                "containerId": "256074863",
+                "variableId": "490",
+                "name": "Geo - Is DMA Region",
+                "type": "cvt_256074863_480",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "output",
+                        "value": "dma"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "geoGetter",
+                        "value": "{{Google Tag Geo Getter}}"
+                    }
+                ],
+                "fingerprint": "1795357426196",
+                "parentFolderId": "478",
+                "formatValue": {}
+            }
+        ],
+        "folder": [
+            {
+                "accountId": "1315341986",
+                "containerId": "256074863",
+                "folderId": "478",
+                "name": "Google Tag Geo Data",
+                "fingerprint": "1795357426193"
+            }
+        ],
+        "fingerprint": "1795357508245",
+        "tagManagerUrl": "https://tagmanager.google.com/#/versions/accounts/1315341986/containers/256074863/versions/0?apiLink=version",
+        "customTemplate": [
+            {
+                "accountId": "1315341986",
+                "containerId": "256074863",
+                "templateId": "480",
+                "name": "Google Tag Geo Data",
+                "fingerprint": "1795357426194",
+                "templateData": "___INFO___\n\n{\n  \"type\": \"MACRO\",\n  \"id\": \"cvt_temp_public_id\",\n  \"version\": 1,\n  \"securityGroups\": [],\n  \"displayName\": \"Google Tag Geo Data\",\n  \"categories\": [\n    \"UTILITY\"\n  ],\n  \"description\": \"Returns country, region or DMA flag from the Google tag\\u0027s built-in IP geolocation cache. Sandboxed JS only - no Custom HTML/JS.\",\n  \"containerContexts\": [\n    \"WEB\"\n  ]\n}\n\n\n___TEMPLATE_PARAMETERS___\n\n[\n  {\n    \"type\": \"TEXT\",\n    \"name\": \"geoGetter\",\n    \"displayName\": \"Geo getter (JavaScript Variable returning the function)\",\n    \"defaultValue\": \"{{Google Tag Geo Getter}}\"\n  },\n  {\n    \"type\": \"SELECT\",\n    \"name\": \"output\",\n    \"displayName\": \"Value to return\",\n    \"macroSelectType\": \"NONE\",\n    \"selectItems\": [\n      {\n        \"value\": \"country\",\n        \"displayValue\": \"Country (ISO 3166-1, e.g. ES)\"\n      },\n      {\n        \"value\": \"region\",\n        \"displayValue\": \"Region (ISO 3166-2, e.g. ES-MC)\"\n      },\n      {\n        \"value\": \"dma\",\n        \"displayValue\": \"Is DMA region (true/false)\"\n      },\n      {\n        \"value\": \"json\",\n        \"displayValue\": \"All values as JSON string\"\n      }\n    ],\n    \"simpleValueType\": true,\n    \"defaultValue\": \"country\"\n  }\n]\n\n\n___SANDBOXED_JS_FOR_WEB_TEMPLATE___\n\nconst JSON = require('JSON');\nconst getType = require('getType');\n\n// data.geoGetter is the built-in \"JavaScript Variable\"\n// google_tag_data.xcd.ip_geo_data_cache.get - GTM resolves it to the function\n// itself. No callInWindow / copyFromWindow / permissions required.\nconst readGeo = () => {\n  const getter = data.geoGetter;\n  if (getType(getter) !== 'function') return undefined;\n  const raw = getter();\n  if (!raw) return undefined;\n  const geo = getType(raw) === 'string' ? JSON.parse(raw) : raw;\n  if (!geo) return undefined;\n  const dma = geo['6'];\n  return {\n    country: geo['0'],\n    region: geo['1'],\n    isDma: dma === undefined ? undefined : (dma === true || dma === 1 || dma === 'true')\n  };\n};\n\nconst geo = readGeo();\nif (!geo) return undefined;\n\nconst out = data.output;\nif (out === 'country') return geo.country;\nif (out === 'region') return geo.region;\nif (out === 'dma') return geo.isDma;\nif (out === 'json') return JSON.stringify(geo);\nreturn undefined;\n\n\n___TESTS___\n\nscenarios:\n- name: Country\n  code: |-\n    let r = runCode({output: 'country', geoGetter: () => '{\"0\":\"ES\",\"1\":\"ES-MC\",\"6\":false}'});\n    assertThat(r).isEqualTo('ES');\n- name: Region\n  code: |-\n    let r = runCode({output: 'region', geoGetter: () => '{\"0\":\"JP\",\"1\":\"JP-13\",\"6\":false}'});\n    assertThat(r).isEqualTo('JP-13');\n- name: DMA true\n  code: |-\n    let r = runCode({output: 'dma', geoGetter: () => '{\"0\":\"DE\",\"1\":\"DE-BE\",\"6\":true}'});\n    assertThat(r).isEqualTo(true);\n- name: Cache unavailable\n  code: |-\n    let r = runCode({output: 'country', geoGetter: () => undefined});\n    assertThat(r).isUndefined();\n- name: Getter missing (Google tag not loaded)\n  code: |-\n    let r = runCode({output: 'country', geoGetter: undefined});\n    assertThat(r).isUndefined();\n- name: Invalid JSON\n  code: |-\n    let r = runCode({output: 'country', geoGetter: () => 'not json'});\n    assertThat(r).isUndefined();\n\n\n___NOTES___\n\nUses undocumented Google tag internals (window.google_tag_data.xcd.ip_geo_data_cache). Indices: 0=country, 1=region, 6=DMA flag. May change without notice. Value is only available after the Google tag has loaded. Requires the built-in JavaScript Variable google_tag_data.xcd.ip_geo_data_cache.get as input.\n\n\n"
+            },
+            {
+                "accountId": "1315341986",
+                "containerId": "256074863",
+                "templateId": "488",
+                "name": "Google Tag Geo Data - dataLayer Push",
+                "fingerprint": "1795357426196",
+                "templateData": "___INFO___\n\n{\n  \"type\": \"TAG\",\n  \"id\": \"cvt_temp_public_id\",\n  \"version\": 1,\n  \"securityGroups\": [],\n  \"displayName\": \"Google Tag Geo Data - dataLayer Push\",\n  \"categories\": [\n    \"UTILITY\"\n  ],\n  \"description\": \"Waits for the Google tag geolocation cache, then pushes geo_country, geo_region and geo_dma_region to dataLayer once. Sandboxed JS only.\",\n  \"containerContexts\": [\n    \"WEB\"\n  ]\n}\n\n\n___TEMPLATE_PARAMETERS___\n\n[\n  {\n    \"type\": \"TEXT\",\n    \"name\": \"geoGetter\",\n    \"displayName\": \"Geo getter (JavaScript Variable returning the function)\",\n    \"defaultValue\": \"{{Google Tag Geo Getter}}\"\n  },\n  {\n    \"type\": \"TEXT\",\n    \"name\": \"eventName\",\n    \"displayName\": \"dataLayer event name\",\n    \"simpleValueType\": true,\n    \"defaultValue\": \"geo_data_ready\"\n  }\n]\n\n\n___SANDBOXED_JS_FOR_WEB_TEMPLATE___\n\nconst JSON = require('JSON');\nconst getType = require('getType');\n\n// data.geoGetter is the built-in \"JavaScript Variable\"\n// google_tag_data.xcd.ip_geo_data_cache.get - GTM resolves it to the function\n// itself. No callInWindow / copyFromWindow / permissions required.\nconst readGeo = () => {\n  const getter = data.geoGetter;\n  if (getType(getter) !== 'function') return undefined;\n  const raw = getter();\n  if (!raw) return undefined;\n  const geo = getType(raw) === 'string' ? JSON.parse(raw) : raw;\n  if (!geo) return undefined;\n  const dma = geo['6'];\n  return {\n    country: geo['0'],\n    region: geo['1'],\n    isDma: dma === undefined ? undefined : (dma === true || dma === 1 || dma === 'true')\n  };\n};\n\nconst createQueue = require('createQueue');\nconst geo = readGeo();\nif (!geo) {\n  data.gtmOnFailure();\n  return;\n}\ncreateQueue('dataLayer')({\n  event: data.eventName || 'geo_data_ready',\n  geo_country: geo.country,\n  geo_region: geo.region,\n  geo_dma_region: geo.isDma\n});\ndata.gtmOnSuccess();\n\n\n___WEB_PERMISSIONS___\n\n[\n  {\n    \"instance\": {\n      \"key\": {\n        \"publicId\": \"access_globals\",\n        \"versionId\": \"1\"\n      },\n      \"param\": [\n        {\n          \"key\": \"keys\",\n          \"value\": {\n            \"type\": 2,\n            \"listItem\": [\n              {\n                \"type\": 3,\n                \"mapKey\": [\n                  {\n                    \"type\": 1,\n                    \"string\": \"key\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"read\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"write\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"execute\"\n                  }\n                ],\n                \"mapValue\": [\n                  {\n                    \"type\": 1,\n                    \"string\": \"dataLayer\"\n                  },\n                  {\n                    \"type\": 8,\n                    \"boolean\": true\n                  },\n                  {\n                    \"type\": 8,\n                    \"boolean\": true\n                  },\n                  {\n                    \"type\": 8,\n                    \"boolean\": false\n                  }\n                ]\n              }\n            ]\n          }\n        }\n      ]\n    },\n    \"clientAnnotations\": {\n      \"isEditedByUser\": true\n    },\n    \"isRequired\": true\n  }\n]\n\n\n___TESTS___\n\nscenarios:\n- name: Pushes when geo available\n  code: |-\n    runCode({eventName: 'geo_data_ready', geoGetter: () => '{\"0\":\"ES\",\"1\":\"ES-MC\",\"6\":false}'});\n    assertApi('gtmOnSuccess').wasCalled();\n- name: Fails when geo unavailable\n  code: |-\n    runCode({eventName: 'geo_data_ready', geoGetter: undefined});\n    assertApi('gtmOnFailure').wasCalled();\n\n\n___NOTES___\n\nUses undocumented Google tag internals (window.google_tag_data.xcd.ip_geo_data_cache). Indices: 0=country, 1=region, 6=DMA flag. May change without notice. Value is only available after the Google tag has loaded. Requires the built-in JavaScript Variable google_tag_data.xcd.ip_geo_data_cache.get as input.\n\n\n"
+            }
+        ]
+    }
+}
